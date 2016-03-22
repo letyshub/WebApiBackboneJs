@@ -7,10 +7,10 @@
                 diameter: 0,
                 orbit: 0,
                 day: 0
-            }
+            }        
         },
         idAttribute: "id",
-        url: "/api/Planets/"
+        urlRoot: "/api/Planets/"
     });
 
     PlanetSet = Backbone.Collection.extend({

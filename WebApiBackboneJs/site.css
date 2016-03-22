@@ -1,0 +1,12 @@
+﻿#planetsList input.edit {
+    display: none; /* Hides input box*/
+    color: red;
+}
+
+#planetsList .editing label {
+    display: none; /* Hides label text when .editing*/
+}
+
+#planetsList .editing input.edit {
+    display: inline; /* Shows input text box when .editing*/
+}

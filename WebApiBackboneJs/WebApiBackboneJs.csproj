@@ -83,14 +83,14 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="index.html" />
-    <Content Include="Scripts\Application\global.js" />
     <Content Include="Scripts\backbone-min.js" />
+    <Content Include="Scripts\global.js" />
     <Content Include="Scripts\jquery-1.12.1.min.js" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\Model\planet-model.js" />
     <Content Include="Scripts\underscore-min.js" />
-    <Content Include="Scripts\View\app-view.js" />
     <Content Include="Scripts\View\planet-view.js" />
+    <Content Include="site.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Application\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
