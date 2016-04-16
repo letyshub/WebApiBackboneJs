@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -44,7 +43,7 @@ namespace WebApiBackboneJs.Controllers
             value.Id = planets.Max(x => x.Id) + 1;
             planets.Add(value);
 
-            return Request.CreateResponse(HttpStatusCode.OK);
+            return Request.CreateResponse(HttpStatusCode.OK, value);
         }
 
         [HttpPut]
@@ -59,7 +58,7 @@ namespace WebApiBackboneJs.Controllers
         }
 
         [HttpDelete]
-        [Route("api/planets/id")]
+        [Route("api/planets/{id}")]
         public HttpResponseMessage Delete(int id)
         {
             Planet planet = planets.FirstOrDefault(x => x.Id == id);

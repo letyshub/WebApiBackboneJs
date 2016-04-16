@@ -2,15 +2,9 @@
     PlanetView = Backbone.View.extend({
         model: new Planet(),
         tagName: 'tr',
-        //template: _.template($('#planet-template').html()),
 
         initialize: function () {
             this.template = _.template($('.planet-list-template').html());
-            /*
-            this.listenTo(this.model, 'change', this.render);
-            this.listenTo(this.model, 'add', this.render);
-            this.listenTo(this.model, 'destroy', this.remove);
-            */
         },
 
         events: {
@@ -61,7 +55,6 @@
     });
 
     planetsList = new PlanetSet();
-
     planetsList.fetch({ data: { page: 'no' } });
 
     PlanetsView = Backbone.View.extend({
@@ -73,14 +66,13 @@
             this.model.on('change', function () {
                 setTimeout(function () {
                     self.render();
-                }, 30);
+                }, 600);
             }, this);
             this.model.on('remove', this.render, this);
         },
         render: function () {
             var self = this;
             this.$el.html('');
-            planetsList.fetch({ data: { page: 'no' } });
             _.each(this.model.toArray(), function (planet) {
                 self.$el.append((new PlanetView({ model: planet })).render().$el);
             });

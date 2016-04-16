@@ -82,12 +82,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
     <Content Include="index.html" />
     <Content Include="Scripts\backbone-min.js" />
-    <Content Include="Scripts\global.js" />
-    <Content Include="Scripts\jquery-1.12.1.min.js" />
+    <Content Include="Scripts\cycle.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json_parse.js" />
+    <Content Include="Scripts\json_parse_state.js" />
     <Content Include="Scripts\Model\planet-model.js" />
+    <Content Include="Scripts\Presenter\planet-presenter.js" />
     <Content Include="Scripts\underscore-min.js" />
     <Content Include="Scripts\View\planet-view.js" />
     <Content Include="site.css" />
@@ -103,7 +107,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\Application\" />
+    <Folder Include="Scripts\lib\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4,13 +4,12 @@
     <title></title>
 	<meta charset="utf-8" />
     <link rel="stylesheet" type="text/css"  href="site.css" />
-    <script src="Scripts/jquery-1.12.1.min.js"></script>
+    <script src="Scripts/jquery.min.js"></script>
     <script src="Scripts/json2.js"></script>
     <script src="Scripts/underscore-min.js"></script>
     <script src="Scripts/backbone-min.js"></script>
     <script src="Scripts/Model/planet-model.js"></script>
-    <script src="Scripts/View/planet-view.js"></script>
-    
+    <script src="Scripts/View/planet-view.js"></script>    
 </head>
 <body>
     <div id="app">
@@ -36,17 +35,6 @@
                 <tbody class="planets-list">
                 </tbody>
              </table>
-             <!--     
-             <div class="planetAdd">
-                <label>Add solar planet:</label>
-                <input type="text" id="newPlanetId" />
-                <input type="text" id="newPlanetName" />
-                <input type="text" id="newPlanetDiameter" />
-                <input type="text" id="newPlanetOrbit" />
-                <input type="text" id="newPlanetDay" />
-                <input id="planetAdd" type="button" value="Add planet" />
-            </div>
-            -->
         </div>
     </div>
 
@@ -80,8 +68,7 @@
 	            $('.orbit-input').val('');
 	            $('.day-input').val('');
 		        console.log(planet.toJSON());
-		        planetsList.create(planet);
-		        planetsView.render();
+	            planetsList.create(planet);
 	        })
         })
     </script>

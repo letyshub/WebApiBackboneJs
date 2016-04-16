@@ -1,5 +1,5 @@
 {
-  "name": "ASP.NET",
+  "name": "WebApiBackboneJs",
   "private": true,
   "dependencies": {
     "backbone": "*",
